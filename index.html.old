@@ -58,11 +58,6 @@
                 "0%": { opacity: "0", transform: "translateY(20px)" },
                 "100%": { opacity: "1", transform: "translateY(0)" },
               },
-              // Menambahkan animasi pop-in untuk chat bubble
-              popIn: {
-                "0%": { opacity: "0", transform: "scale(0.8) translateY(10px)" },
-                "100%": { opacity: "1", transform: "scale(1) translateY(0)" },
-              }
             },
           },
         },
@@ -703,7 +698,7 @@
                       >Start From</span
                     >
                     <div class="flex items-baseline">
-                      <span class="text-2xl font-extrabold text-gray-900"
+                      <span clas20Beatkus="text-2xl font-extrabold text-gray-900"
                         >100k</span
                       >
                       <span class="text-xs font-medium text-gray-400 ml-1"
@@ -1123,42 +1118,19 @@
       </div>
     </footer>
 
-    <!-- WhatsApp Floating Widget (Professional Style) -->
-    <div class="fixed bottom-8 right-8 z-[80] flex flex-col items-end gap-2 group">
-      <!-- Animated Text Bubble -->
-      <!-- Muncul otomatis setelah delay 2 detik -->
-      <div 
-        class="bg-white text-gray-800 px-4 py-2.5 rounded-2xl rounded-tr-none shadow-[0_8px_30px_rgb(0,0,0,0.12)] border border-green-50 transform transition-all duration-500 opacity-0 animate-[popIn_0.5s_ease-out_2s_forwards] flex items-center gap-3"
-      >
-        <!-- Robot Icon + Status Online (Green Dot) -->
-        <div class="relative">
-            <i class="fas fa-robot text-2xl text-gray-600"></i>
-            <span class="absolute -bottom-1 -right-1 flex h-3 w-3">
-              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-              <span class="relative inline-flex rounded-full h-3 w-3 bg-green-500 border-2 border-white"></span>
-            </span>
-        </div>
-
-        <div>
-          <p class="text-[10px] text-gray-400 font-medium leading-tight" data-i18n="wa_sub">Admin Online</p>
-          <p class="text-xs font-bold text-gray-800 leading-tight" data-i18n="wa_label">Hubungi Kami</p>
-        </div>
-      </div>
-
-      <!-- Main Button -->
-      <a
-        href="https://wa.me/6285708049645"
-        target="_blank"
-        class="relative flex items-center justify-center w-14 h-14 bg-green-500 rounded-full text-white shadow-[0_4px_14px_0_rgba(74,222,128,0.39)] transition-all duration-300 hover:bg-green-600 hover:scale-110 hover:shadow-[0_6px_20px_rgba(74,222,128,0.23)]"
-        aria-label="Chat WhatsApp"
-      >
-        <!-- Ping/Ripple Effect Ring -->
-        <span class="absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-30 animate-ping"></span>
-        
-        <!-- Icon -->
-        <i class="fab fa-whatsapp text-3xl z-10"></i>
-      </a>
-    </div>
+    <!-- WhatsApp Floating Button -->
+    <a
+      href="https://wa.me/6285708049645"
+      target="_blank"
+      class="fixed bottom-6 right-6 z-[70] bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-[0_0_20px_rgba(37,211,102,0.5)] transition-all duration-300 hover:-translate-y-1 group flex items-center justify-center"
+      aria-label="Chat WhatsApp"
+    >
+      <i class="fab fa-whatsapp text-3xl animate-bounce-slow"></i>
+      <!-- Tooltip -->
+      <span class="absolute right-full mr-3 bg-white text-gray-800 px-3 py-1 rounded-lg text-xs font-bold shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap hidden sm:block">
+        Chat Admin
+      </span>
+    </a>
 
     <!-- JavaScript Logic -->
     <script>
@@ -1252,9 +1224,7 @@
           contact_us: "Hubungi Kami",
           maps_subtitle: "Temukan Kami",
           maps_title: "Kunjungi Basecamp",
-          maps_desc: "Siap memulai petualangan? Datang langsung ke basecamp kami dan pilih motor terbaik untuk perjalanan Anda.",
-          wa_sub: "Admin Online",
-          wa_label: "Butuh Bantuan?"
+          maps_desc: "Siap memulai petualangan? Datang langsung ke basecamp kami dan pilih motor terbaik untuk perjalanan Anda."
         },
         en: {
           topbar_text: "Lombok's Trusted Motor Rental",
@@ -1316,9 +1286,7 @@
           contact_us: "Contact Us",
           maps_subtitle: "Find Us",
           maps_title: "Visit Our Basecamp",
-          maps_desc: " Come directly to our basecamp and choose the best motorcycle for your trip.",
-          wa_sub: "Online Admin",
-          wa_label: "Need Help?"
+          maps_desc: " Come directly to our basecamp and choose the best motorcycle for your trip."
         },
       };
 
